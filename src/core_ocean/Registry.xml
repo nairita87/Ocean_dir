@@ -2048,6 +2048,15 @@
 
 			<var name="pointCellGlobalID"/>
 		</stream>
+		<stream name="wave_drag"
+                                type="input"
+                                input_interval="initial_only"
+                                filename_template="jsl_lim24_inv_hrs.nc"
+                                runtime_format="single_file"
+                                mode="forward;analysis">
+                        <var name="rinv"/>
+                </stream>
+
 
 	</streams>
 
@@ -2999,6 +3008,11 @@
 			 description="Bottom drag Cd coefficient in cells."
 			 packages="variableBottomDragPKG"
 		/>
+		<var name="rinv" type="real" dimensions="nCells" units="unitless"
+                         description="wave drag coefficient or e-folding time"
+                      
+                />
+
 		<var name="nForcingGroupCounter"		type="integer"	dimensions="Time"/>
 		<var name="forcingGroupNames"			type="text"	dimensions="nForcingGroupsMax Time"/>
 		<var name="forcingGroupRestartTimes"		type="text"	dimensions="nForcingGroupsMax Time"/>
